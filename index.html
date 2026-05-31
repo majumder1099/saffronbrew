@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saffron Brew — Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5efe6;
+      padding: 2rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 600px;
+      background: #1a1208;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+    }
+
+    .card-top {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid rgba(239,159,39,0.15);
+    }
+
+    .top-line {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: #EF9F27;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-mark i { font-size: 22px; color: #1a1208; }
+
+    .pill {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #EF9F27;
+      background: rgba(239,159,39,0.12);
+      border: 0.5px solid rgba(239,159,39,0.3);
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #fdf4e7;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(253,244,231,0.55);
+      line-height: 1.7;
+      max-width: 420px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1.1rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: rgba(253,244,231,0.6);
+      border: 0.5px solid rgba(253,244,231,0.15);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .tag i { font-size: 12px; }
+
+    .img-section {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .img-section img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 240px;
+      background: #251a08;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .img-placeholder i { font-size: 32px; color: rgba(239,159,39,0.35); }
+    .img-placeholder span { font-size: 12px; color: rgba(239,159,39,0.4); }
+
+    .img-hover-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26,18,8,0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s;
+    }
+
+    .img-section:hover .img-hover-overlay { background: rgba(26,18,8,0.55); }
+
+    .visit-chip {
+      opacity: 0;
+      transition: opacity 0.2s;
+      background: #EF9F27;
+      color: #1a1208;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 9px 22px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .img-section:hover .visit-chip { opacity: 1; }
+    .visit-chip i { font-size: 15px; }
+
+    .card-bottom {
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .made-with {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .made-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #EF9F27;
+      opacity: 0.5;
+    }
+
+    .made-text {
+      font-size: 11px;
+      color: rgba(253,244,231,0.35);
+      font-weight: 300;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      background: #EF9F27;
+      color: #1a1208;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 9px 22px;
+      border-radius: 8px;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .cta-btn:hover { background: #FAC775; }
+    .cta-btn:active { transform: scale(0.97); }
+    .cta-btn i { font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="card-top">
+      <div class="top-line">
+        <div class="brand-mark">
+          <i class="ti ti-coffee"></i>
+        </div>
+        <span class="pill">WordPress · Figma</span>
+      </div>
+
+      <h1 class="project-title">Saffron Brew</h1>
+      <p class="project-desc">A full website developed in WordPress, built from a custom Figma design. Responsive, performance-optimized, and production-ready.</p>
+
+      <div class="tags">
+        <span class="tag"><i class="ti ti-brand-wordpress"></i> WordPress</span>
+        <span class="tag"><i class="ti ti-palette"></i> Custom Figma template</span>
+        <span class="tag"><i class="ti ti-devices"></i> Responsive design</span>
+        <span class="tag"><i class="ti ti-rocket"></i> Live production</span>
+      </div>
+    </div>
+
+  
+    <a class="img-section" href="https://demo-project.infinityfree.me/saffronbrew/" target="_blank">
+    
+      <img
+        src="saffronbrew.png"
+        alt="Saffron Brew homepage screenshot"
+        onerror="this.style.display='none'; document.querySelector('.img-placeholder').style.display='flex';"
+      />
+      <div class="img-placeholder">
+        <i class="ti ti-photo"></i>
+        <span>Add homepage.jpg to see your preview</span>
+      </div>
+      <div class="img-hover-overlay">
+        <div class="visit-chip">
+          <i class="ti ti-external-link"></i> View live site
+        </div>
+      </div>
+    </a>
+
+    <div class="card-bottom">
+      <div class="made-with">
+        <div class="made-dot"></div>
+        <span class="made-text">Click image or button to visit</span>
+      </div>
+      <a class="cta-btn" href="https://demo-project.infinityfree.me/saffronbrew/" target="_blank">
+        <i class="ti ti-world"></i> Live website
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
