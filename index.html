@@ -21,7 +21,7 @@
 
     .card {
       width: 100%;
-      max-width: 600px;
+      max-width: 680px;
       background: #1a1208;
       border-radius: 18px;
       overflow: hidden;
@@ -208,6 +208,15 @@
     .cta-btn:hover { background: #FAC775; }
     .cta-btn:active { transform: scale(0.97); }
     .cta-btn i { font-size: 14px; }
+    @media (max-width: 480px) {
+  body { padding: 1rem; }
+  .card-top { padding: 1.25rem 1.25rem 1rem; }
+  .project-title { font-size: 24px; }
+  .card-bottom { padding: 0.9rem 1.25rem; flex-wrap: wrap; }
+  .cta-btn { width: 100%; justify-content: center; }
+  .tags { gap: 6px; }
+  .tag { font-size: 10px; }
+}
   </style>
 </head>
 <body>
@@ -222,15 +231,18 @@
       </div>
 
       <h1 class="project-title">Saffron Brew</h1>
-      <p class="project-desc">Converted a customized Figma template into a fully responsive WordPress website using Elementor. Optimized for performance and user experience.</p>
+      <p class="project-desc">Converted a customized Figma template into a responsive WordPress website using Elementor. Optimized for desktop and mobile viewing with a clean and user-friendly experience.</p>
 
-      <div class="tags">
-        <span class="tag"><i class="ti ti-brand-wordpress"></i> WordPress</span>
-        <span class="tag"><i class="ti ti-palette"></i> Custom Figma template</span>
-        <span class="tag"><i class="ti ti-devices"></i> Responsive design</span>
+     <div class="tags">
+        <span class="tag"><i class="ti ti-brand-wordpress"></i> WordPress Elementor</span>
+        <span class="tag"><i class="ti ti-layout"></i> Figma to WordPress</span>
+        <span class="tag"><i class="ti ti-devices"></i> Desktop & Mobile Responsive</span>
         <span class="tag"><i class="ti ti-rocket"></i> Live production</span>
       </div>
-    </div>
+
+
+
+
 
   
     <a class="img-section" href="https://demo-project.infinityfree.me/saffronbrew/" target="_blank">
