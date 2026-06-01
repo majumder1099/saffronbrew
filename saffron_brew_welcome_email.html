@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saffron Brew — Welcome Email</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      /*background: #2a1f10;*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      font-family: 'Outfit', sans-serif;
+    }
+    .nl {
+      width: 100%;
+      max-width: 520px;
+      background: #1a1208;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .nl-header {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid rgba(239,159,39,0.12);
+    }
+    .nl-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+    .nl-logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #EF9F27;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nl-logo-icon i { font-size: 18px; color: #1a1208; }
+    .nl-logo-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fdf4e7;
+    }
+    .nl-hero-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #EF9F27;
+      margin-bottom: 10px;
+    }
+    .nl-hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #fdf4e7;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .nl-hero-sub {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(253,244,231,0.55);
+      line-height: 1.7;
+    }
+    .nl-body {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(239,159,39,0.1);
+    }
+    .nl-body p {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(253,244,231,0.65);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .nl-perks { display: flex; flex-direction: column; gap: 10px; margin: 1rem 0; }
+    .nl-perk { display: flex; align-items: flex-start; gap: 10px; }
+    .nl-perk-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: rgba(239,159,39,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .nl-perk-icon i { font-size: 14px; color: #EF9F27; }
+    .nl-perk-text { font-size: 12px; color: rgba(253,244,231,0.6); line-height: 1.6; }
+    .nl-perk-text strong { color: rgba(253,244,231,0.85); font-weight: 500; display: block; font-size: 13px; }
+    .nl-cta {
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .nl-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      background: #EF9F27;
+      color: #1a1208;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 28px;
+      border-radius: 8px;
+      width: 100%;
+      transition: background 0.15s;
+    }
+    .nl-btn:hover { background: #FAC775; }
+    .nl-btn i { font-size: 15px; }
+    .nl-note { font-size: 11px; color: rgba(253,244,231,0.3); text-align: center; }
+    .nl-footer {
+      padding: 1rem 2rem;
+      border-top: 1px solid rgba(239,159,39,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nl-footer-brand { font-size: 11px; color: rgba(253,244,231,0.25); }
+    .nl-footer-links { display: flex; gap: 12px; }
+    .nl-footer-links a { font-size: 11px; color: rgba(253,244,231,0.3); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="nl">
+    <div class="nl-header">
+      <div class="nl-logo">
+        <div class="nl-logo-icon"><i class="ti ti-coffee"></i></div>
+        <span class="nl-logo-name">Saffron Brew</span>
+      </div>
+      <div class="nl-hero-label">Welcome</div>
+      <h1 class="nl-hero-title">We're so glad<br>you're here.</h1>
+      <p class="nl-hero-sub">You've just joined a community of coffee lovers who appreciate the finer things in every cup.</p>
+    </div>
+    <div class="nl-body">
+      <p>Thank you for subscribing to Saffron Brew. We craft every blend with care — from sourcing rare single-origin beans to perfecting each roast profile.</p>
+      <div class="nl-perks">
+        <div class="nl-perk">
+          <div class="nl-perk-icon"><i class="ti ti-discount"></i></div>
+          <div class="nl-perk-text"><strong>10% off your first order</strong>Use code WELCOME10 at checkout</div>
+        </div>
+        <div class="nl-perk">
+          <div class="nl-perk-icon"><i class="ti ti-mail"></i></div>
+          <div class="nl-perk-text"><strong>Weekly brew guides</strong>Tips, recipes & new arrivals — every Thursday</div>
+        </div>
+        <div class="nl-perk">
+          <div class="nl-perk-icon"><i class="ti ti-star"></i></div>
+          <div class="nl-perk-text"><strong>Early access</strong>Be the first to know about limited edition blends</div>
+        </div>
+      </div>
+    </div>
+    <div class="nl-cta">
+      
+      <a class="nl-btn" href="https://demo-project.infinityfree.me/saffronbrew/" target="_blank">
+        <i class="ti ti-world"></i> Explore our blends
+      </a>
+      <span class="nl-note">You can unsubscribe anytime. No spam, ever.</span>
+    </div>
+    <div class="nl-footer">
+      <span class="nl-footer-brand">© 2026 Saffron Brew</span>
+      <div class="nl-footer-links">
+        <a href="#">Unsubscribe</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
